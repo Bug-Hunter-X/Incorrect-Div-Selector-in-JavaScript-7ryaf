@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // This script attempts to modify the content of the div after the page has loaded.
+    // However, it uses an incorrect selector.
+    document.querySelector("#myDiv.myClass").innerHTML = "This text should replace the original."; 
+  </script>
+</body>
+</html>
